@@ -31,6 +31,7 @@ namespace MusicPlayer
              */
             InitializeComponent();
 
+            // Tickイベントが発生してから次のTickイベントが発生するまでの時間(ミリ秒単位)を取得、または設定.
             timer.Interval = 300;
             timer.Tick += delegate
             {
