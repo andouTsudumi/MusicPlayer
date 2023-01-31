@@ -33,21 +33,29 @@ namespace MusicPlayer
 
             // Tickイベントが発生してから次のTickイベントが発生するまでの時間(ミリ秒単位)を取得、または設定.
             timer.Interval = 300;
+
+
             timer.Tick += delegate
             {
                 /*
-                 * WindowsMediaPlayerの再生状況はplayStateで参照することが可能. 
+                 * WindowsMediaPlayerの再生状況はplayStateで参照することが可能.
+                 * WMPPlayerのステータスが止まった状態の時.
                  */
                 if (mediaPlayer.playState == WMPPlayState.wmppsStopped)
                 {
+                    // また再生をする.
                     mediaPlayer.controls.play();
                 }
             };
+            // タイマーを起動.
             timer.Start();
 
-            this.mediaPlayer.settings.volume = 20;              // ボリュームの調整.
-            this.mediaPlayer.URL = @"C:\Users\owner\Desktop\悲しい記憶.mp3";
+            // ボリュームの調整.
+            this.mediaPlayer.settings.volume = 20;
+
+            this.mediaPlayer.URL = @"\bgm\sadMemory.mp3";
             /*
+             * URLというかファイルパスを設定、なお直打ちの模様.
              * @はバックスラッシュをエスケープ文字として解釈しないように
              * コンパイラに指示を出す.
              */
