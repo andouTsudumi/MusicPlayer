@@ -7,6 +7,9 @@ Sound::Sound(char* _filePass)
 	:filePass(nullptr)        // ファイルパス変数の初期化.
 {
 	this->filePass = _filePass;
+
+	// ループ再生する.
+	PlaySoundFile(filePass, DX_PLAYTYPE_LOOP);
 }
 
 /// <summary>
@@ -22,9 +25,6 @@ Sound::~Sound()
 /// </summary>
 void Sound::Updata()
 {
-	// ループ再生する.
-	PlaySoundFile(filePass, DX_PLAYTYPE_LOOP);
-
 	if (CheckSoundFile())
 	{
 		AppLogAdd("再生中なう☆\n");
