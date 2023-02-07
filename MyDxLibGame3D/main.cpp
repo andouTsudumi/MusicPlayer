@@ -29,7 +29,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	{
 		ClearDrawScreen();
 
-		sound->Updata();
 
 		ScreenFlip();
 	}
