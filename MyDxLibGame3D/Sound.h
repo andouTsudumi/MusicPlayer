@@ -1,25 +1,4 @@
 #pragma once
-/// <summary>
-/// ファイルの名前と順番を保存しているenum型class.
-/// </summary>
-enum FileName : unsigned short
-{
-	none = 0,            // ファイルパスがない時.
-	sadMemory,           // 曲名：悲しい記憶.
-
-	maxNum,              // ファイルパスの最大数.
-};
-
-/// <summary>
-/// ファイルパスと上記のFileNameの互換性を合わせるための配列.
-/// </summary>
-static char* filePassAry[FileName::maxNum] =
-{
-	"../MyDxLibGame3D/data/bgm/none",
-	"../MyDxLibGame3D/data/bgm/sadMemory.mp3",
-	//"C:/Users/owner/Desktop/gitFileFork/MusicPlayer/MyDxLibGame3D/data/bgm/sadMemory.mp3",
-};
-
 /*
 * const char* ＝ 定数データへのポインタ(変数内部の変更不可、アドレスの変更可能)
 * char ary1 = "aaaaa";
@@ -49,7 +28,8 @@ public:
 	/// <summary>
 	/// コンストラクタ.
 	/// </summary>
-	Sound(char* _filePass);
+	/// <param name="_filePass">使用するファイルパスを代入する.</param>
+	Sound(char* filePass);
 
 	/// <summary>
 	/// デストラクタ.
@@ -60,10 +40,20 @@ public:
 	/// 更新関数.
 	/// </summary>
 	void Updata();
-
 private:
 	/// <summary>
 	/// ファイルパスを保存する変数.
 	/// </summary>
-	char* filePass;
+	char* mFilePass;
+};
+
+/// <summary>
+/// ファイルパスと下記のFileNameとの互換性を合わせるための配列.
+/// </summary>
+static char* soundFilePassAry[mFileName::maxNum] =
+{
+	"../MyDxLibGame3D/data/bgm/none",
+	"../MyDxLibGame3D/data/bgm/sadMemory.mp3",
+	"../MyDxLibGame3D/data/bgm/Cartoon - On & On (feat. Daniel Levi).mp3",
+	"../MyDxLibGame3D/data/bgm/Arc North - Meant To Be (feat. Krista Marina).mp3",
 };
