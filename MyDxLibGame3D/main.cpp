@@ -22,18 +22,21 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	// windowの初期設定.
 	InitialSettingWindow();
 
-	Sound* sound = new Sound(filePassAry[FileName::sadMemory]);
+	Sound* sound = new Sound(soundFilePassAry[mFileName::SadMemory]);
+	Image* img = new Image(imgFilePassAry[mFileName::SadMemory]);
 
 	// ループ文.
 	while (!CheckHitKey(KEY_INPUT_ESCAPE))
 	{
 		ClearDrawScreen();
 
+		img->Draw();
 
 		ScreenFlip();
 	}
 
 	sound->~Sound();
+	img->~Image();
 
 	// ＤＸライブラリの後始末
 	DxLib_End();
@@ -48,8 +51,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 void InitialSettingWindow()
 {
 	//画面モードのセット
-	//SetGraphMode(640, 480, 16);
-	/*SetGraphMode( SCREEN_W, SCREEN_H, 32);*/
+	SetGraphMode(screenW, screenH, screenG);
 
 	ChangeWindowMode(TRUE);
 
