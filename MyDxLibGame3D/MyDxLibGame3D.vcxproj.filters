@@ -11,6 +11,9 @@
     <Filter Include="ソース ファイル\Sound">
       <UniqueIdentifier>{7c9b1f76-3ef5-4602-a2fe-267476229853}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Image">
+      <UniqueIdentifier>{4fda788b-cc19-44d1-8ee4-0c69db777037}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -22,6 +25,9 @@
     <ClCompile Include="Sound.cpp">
       <Filter>ソース ファイル\Sound</Filter>
     </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>ソース ファイル\Image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -29,6 +35,9 @@
     </ClInclude>
     <ClInclude Include="Sound.h">
       <Filter>ソース ファイル\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>ソース ファイル\Image</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
