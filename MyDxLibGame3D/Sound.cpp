@@ -3,13 +3,14 @@
 /// <summary>
 /// コンストラクタ.
 /// </summary>
-Sound::Sound(char* _filePass)
-	:filePass(nullptr)        // ファイルパス変数の初期化.
+/// <param name="_filePass">使用するファイルパスを代入する.</param>
+Sound::Sound(char* filePass)
+	:mFilePass(nullptr)        // ファイルパス変数の初期化.
 {
-	this->filePass = _filePass;
+	this->mFilePass = filePass;
 
 	// ループ再生する.
-	PlaySoundFile(filePass, DX_PLAYTYPE_LOOP);
+	PlaySoundFile(mFilePass, DX_PLAYTYPE_LOOP);
 }
 
 /// <summary>
@@ -17,7 +18,7 @@ Sound::Sound(char* _filePass)
 /// </summary>
 Sound::~Sound()
 {
-	delete filePass;          // ファイルパス変数の削除.
+	delete mFilePass;          // ファイルパス変数の削除.
 }
 
 /// <summary>
