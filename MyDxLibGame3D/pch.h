@@ -19,6 +19,7 @@ const enum mFileName : unsigned short
 
 #include "Sound.h"
 #include "Image.h"
+#include "Button.h"
 
 
 // ˆÈ‰ºŒÅ’è•Ï”.

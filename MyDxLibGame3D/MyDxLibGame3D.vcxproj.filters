@@ -14,6 +14,12 @@
     <Filter Include="ソース ファイル\Image">
       <UniqueIdentifier>{4fda788b-cc19-44d1-8ee4-0c69db777037}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{bb811cab-ad43-4640-bd62-40f937866739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Button">
+      <UniqueIdentifier>{65763477-0957-4e8f-bf4b-44d6ce6e2bff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,6 +34,12 @@
     <ClCompile Include="Image.cpp">
       <Filter>ソース ファイル\Image</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -39,5 +51,7 @@
     <ClInclude Include="Image.h">
       <Filter>ソース ファイル\Image</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Button.h" />
   </ItemGroup>
 </Project>
